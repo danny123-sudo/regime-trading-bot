@@ -1,0 +1,12 @@
+# Freqtrade is the chassis: data, execution, stops, Telegram, backtesting,
+# hyperopt. It pins its own ccxt/pandas/numpy, so we do not.
+# Requires Python >= 3.11 and the TA-Lib C library.
+freqtrade>=2026.7
+
+# Our own layers
+python-dotenv>=1.0.1
+aiohttp>=3.9.5
+
+# Tests
+pytest>=8.0.0
+pytest-asyncio>=0.23.0

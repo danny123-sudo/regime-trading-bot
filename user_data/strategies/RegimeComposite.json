@@ -1,0 +1,36 @@
+{
+  "strategy_name": "RegimeComposite",
+  "params": {
+    "roi": {
+      "0": 100.0
+    },
+    "stoploss": {
+      "stoploss": -0.2
+    },
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 3
+    },
+    "protection": {
+      "p_daily_risk_budget": 0.02
+    },
+    "buy": {
+      "p_adx_trend_min": 30,
+      "p_range_entry_bb": 0.21,
+      "p_threshold": 0.67,
+      "p_volume_mult": 1.32
+    },
+    "sell": {
+      "p_range_exit_bb": 0.62,
+      "p_stop_mult": 2.3,
+      "p_trail_after_r": 3.9
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-08-29 19:57:26.558588+00:00"
+}

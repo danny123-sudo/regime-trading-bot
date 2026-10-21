@@ -1,0 +1,26 @@
+{
+  "_note": "Council-writable. Bounds live in core/council.py and cannot be widened from here.",
+  "_global": {
+    "size_multiplier": 1.0
+  },
+  "CoreTrend": {
+    "enabled": true,
+    "st_period": 14,
+    "st_mult": 4.0,
+    "donchian": 48,
+    "stop_atr": 5.0,
+    "trail_atr": 6.0,
+    "trail_after_r": 3.0,
+    "vol_max": 0.08
+  },
+  "MomentumCore": {
+    "enabled": true,
+    "mom_lookback": 12,
+    "mom_min": 0.02,
+    "btc_lookback": 24,
+    "stop_atr": 4.0,
+    "trail_atr": 5.0,
+    "trail_after_r": 1.5,
+    "vol_max": 0.12
+  }
+}

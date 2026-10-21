@@ -1,0 +1,29 @@
+{
+    "pairlists": [
+        {
+            "method": "StaticPairList"
+        },
+        {
+            "method": "AgeFilter",
+            "min_days_listed": 30
+        },
+        {
+            "method": "SpreadFilter",
+            "max_spread_ratio": 0.005
+        },
+        {
+            "method": "VolumePairList",
+            "number_assets": 12,
+            "sort_key": "quoteVolume",
+            "min_value": 500000,
+            "refresh_period": 3600
+        },
+        {
+            "method": "VolatilityFilter",
+            "lookback_days": 7,
+            "min_volatility": 0.01,
+            "max_volatility": 0.6,
+            "refresh_period": 3600
+        }
+    ]
+}

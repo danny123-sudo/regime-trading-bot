@@ -1,0 +1,48 @@
+.env
+data/
+# One inbox, enforced here rather than by convention: context/ is ignored, and
+# exactly one file inside it is not. A second markdown file added under
+# context/ is silently untracked, which is the intended outcome — the council
+# agreed on a single backlog rather than a file per finding.
+context/
+!context/code_backlog.md
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.mypy_cache/
+.pytest_cache/
+*.log
+.DS_Store
+
+# freqtrade artifacts
+user_data/data/
+user_data/backtest_results/
+user_data/hyperopt_results/
+user_data/logs/
+user_data/*.sqlite
+user_data/strategy_config.prev.json
+user_data/adaptive_state.json
+
+# Third-party benchmark strategies — fetched, not vendored
+benchmarks/strategies/Supertrend.py
+benchmarks/strategies/BbandRsi.py
+benchmarks/strategies/ClucMay72018.py
+benchmarks/strategies/ElliotV8.py
+benchmarks/strategies/NostalgiaForInfinityX6.py
+benchmarks/results.json
+
+# Instance configs contain generated API passwords and JWT secrets
+instances/core.json
+instances/momentum.json
+instances/router_state.json
+instances/.pids/
+
+# Council reads the repo over GitHub, so its data export must be tracked
+!council/data/
+
+# Live exchange credentials — VPS only, never committed
+.env.secrets
+
+# Third-party reference repos: cloned locally, never vendored
+research/external/

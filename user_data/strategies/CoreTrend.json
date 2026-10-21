@@ -1,0 +1,22 @@
+{
+  "strategy_name": "CoreTrend",
+  "_note": "Hand-reasoned ablation config. Beat hyperopt out of sample twice (+55.53% vs +10.87% on 2025-01..2026-08). Do not overwrite with a hyperopt result unless it wins on the TEST window.",
+  "params": {
+    "buy": {
+      "p_st_period": 14,
+      "p_st_mult": 4.0,
+      "p_use_donchian": true,
+      "p_use_ema": true,
+      "p_use_vol": true
+    },
+    "sell": {
+      "p_use_st_exit": true,
+      "p_stop_atr": 5.0,
+      "p_trail_atr": 6.0,
+      "p_trail_after_r": 3.0
+    },
+    "protection": {
+      "p_target_vol": 0.6
+    }
+  }
+}

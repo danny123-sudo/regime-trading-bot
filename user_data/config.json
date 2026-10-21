@@ -1,0 +1,105 @@
+{
+    "$schema": "https://schema.freqtrade.io/schema.json",
+    "max_open_trades": 3,
+    "stake_currency": "USDT",
+    "stake_amount": 32,
+    "tradable_balance_ratio": 0.99,
+    "fiat_display_currency": "CAD",
+    "dry_run": true,
+    "dry_run_wallet": 400,
+    "cancel_open_orders_on_exit": false,
+    "trading_mode": "spot",
+    "margin_mode": "",
+    "timeframe": "15m",
+    "unfilledtimeout": {
+        "entry": 2,
+        "exit": 2,
+        "exit_timeout_count": 0,
+        "unit": "minutes"
+    },
+    "entry_pricing": {
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1,
+        "price_last_balance": 0.0,
+        "check_depth_of_market": {
+            "enabled": true,
+            "bids_to_ask_delta": 1
+        }
+    },
+    "exit_pricing": {
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1
+    },
+    "exchange": {
+        "name": "kucoin",
+        "key": "",
+        "secret": "",
+        "password": "",
+        "ccxt_config": {},
+        "ccxt_async_config": {},
+        "pair_whitelist": [
+            "BTC/USDT",
+            "ETH/USDT",
+            "BNB/USDT",
+            "XRP/USDT",
+            "SOL/USDT",
+            "TRX/USDT",
+            "HYPE/USDT",
+            "ZEC/USDT",
+            "DOGE/USDT",
+            "RAIN/USDT",
+            "XMR/USDT",
+            "LINK/USDT"
+        ],
+        "pair_blacklist": [
+            "KCS/USDT",
+            "USDC/USDT",
+            "FDUSD/USDT",
+            "DAI/USDT",
+            "TUSD/USDT",
+            ".*(3S|3L|5S|5L)/.*",
+            ".*(UP|DOWN|BEAR|BULL)/.*"
+        ]
+    },
+    "pairlists": [
+        {
+            "method": "StaticPairList"
+        }
+    ],
+    "telegram": {
+        "enabled": false,
+        "token": "",
+        "chat_id": "",
+        "notification_settings": {
+            "status": "on",
+            "warning": "on",
+            "startup": "on",
+            "entry": "on",
+            "entry_fill": "on",
+            "exit": "on",
+            "exit_fill": "on",
+            "protection_trigger": "on",
+            "protection_trigger_global": "on"
+        }
+    },
+    "api_server": {
+        "enabled": false,
+        "listen_ip_address": "127.0.0.1",
+        "listen_port": 8080,
+        "verbosity": "error",
+        "jwt_secret_key": "",
+        "CORS_origins": [],
+        "username": "",
+        "password": ""
+    },
+    "bot_name": "regime-composite",
+    "initial_state": "running",
+    "force_entry_enable": false,
+    "internals": {
+        "process_throttle_secs": 5
+    },
+    "dataformat_ohlcv": "feather",
+    "db_url": "sqlite:///user_data/tradesv3.dryrun.sqlite"
+}
